@@ -31,8 +31,16 @@
 
                                     <div th:if="${param.error}">
 
-                                        <div class="alert alert-danger col-xs-10">
-                                            Invalid username and password.
+                                        <div class="alert alert-danger col-xs-10 mb-3" role="alert">
+                                            <i>Invalid username and password.</i>
+                                        </div>
+
+                                    </div>
+
+                                    <div th:if="${param.logout}">
+
+                                        <div class="alert alert-success col-xs-10 mb-3" role="alert">
+                                            <i>User logged out.</i>
                                         </div>
 
                                     </div>
