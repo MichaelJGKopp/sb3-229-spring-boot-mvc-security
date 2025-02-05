@@ -37,8 +37,10 @@
         Role(s): <span sec:authentication="principal.authorities"></span>
     </p>
 
+    <hr>
+
     <form action="#" th:action="@{/logout}" method="POST">
-        <input type="submit" value="Logout" class="btn btn-primary mt-2"/>
+        <input type="submit" value="Logout" class="btn btn-secondary mt-2"/>
     </form>
 
 </div>

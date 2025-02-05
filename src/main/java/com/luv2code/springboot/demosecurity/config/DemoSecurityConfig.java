@@ -21,6 +21,9 @@ public class DemoSecurityConfig {
                                 .requestMatchers("/leaders/**").hasRole("MANAGER")  // ** means all subdirectories
                                 .requestMatchers("/systems/**").hasRole("ADMIN")
                                 .anyRequest().authenticated())  // any other request must be authenticated
+                .exceptionHandling(configurer ->
+                        configurer
+                                .accessDeniedPage("/access-denied"))
 
                 .formLogin(form ->
                         form
