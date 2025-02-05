@@ -14,15 +14,15 @@ public class DemoController {
     }
 
     @GetMapping("/leaders")
-    public String forLeadersOnly() {
+    public String showLeaders() {
 
         return "leaders";
     }
 
     @GetMapping("/systems")
-    public String forAdminsOnly() {
+    public String showSystems() {
 
-        return "admins";
+        return "systems";
     }
 
 }
