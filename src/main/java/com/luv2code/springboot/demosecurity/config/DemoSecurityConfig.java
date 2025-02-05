@@ -18,7 +18,7 @@ public class DemoSecurityConfig {
 //                      define here access to different endpoints for different roles
                         configurer
                                 .requestMatchers("/").hasRole("EMPLOYEE")
-                                .requestMatchers("/leaders/**").hasRole("MANAGER")
+                                .requestMatchers("/leaders/**").hasRole("MANAGER")  // ** means all subdirectories
                                 .requestMatchers("/systems/**").hasRole("ADMIN")
                                 .anyRequest().authenticated())  // any other request must be authenticated
 
