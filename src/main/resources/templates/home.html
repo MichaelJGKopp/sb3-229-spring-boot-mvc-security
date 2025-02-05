@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>luv2code Company Home Page</title>
@@ -21,6 +23,12 @@
     <div class="mt-3">
         Welcome to the luv2Code company home page!
     </div>
+
+    <p class="mt-3">
+        User: <span sec:authentication="principal.username"></span>
+        <br>
+        Role(s): <span sec:authentication="principal.authorities"></span>
+    </p>
 
     <div class="mt-3">
         <form action="#" th:action="@{/logout}" method="POST">
